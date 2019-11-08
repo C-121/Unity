@@ -18,12 +18,12 @@ public class Mover : MonoBehaviour
     private Vector3 mousePos;
     private Vector3 pos;
     private BoxCollider2D bc;
-    private GameObject turret;
+    private Transform turret;
    
    	void Start(){
    		bc = GetComponent<BoxCollider2D>();
    		if(transform.childCount > 0)
-   			transform.GetChild(0);
+   			turret = transform.GetChild(0);
    	}
     void Update()
     {
